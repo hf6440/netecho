@@ -14,6 +14,7 @@ int reply(int fd)
 	{
 		if((readSize=read(fd,line,99))==0)
 			return 0;
+		printf("##received a connection##\n");
 		write(fd,line,readSize);	
 	}
 }
